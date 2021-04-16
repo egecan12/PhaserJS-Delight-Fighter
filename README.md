@@ -1,5 +1,9 @@
 # The Delights of Constantinople 2019
 
+It is a web game develop on Phaser.js and Node.js.
+
+You can also send your high score to MongoDB at the end of the game.
+
 I did not spen too much time on it so It may look broken on some browsers so Chrome is recomended. 
 There is only 2 episodes waiting to be developed but yu can test it out.
 
