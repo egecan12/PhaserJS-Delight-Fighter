@@ -1,0 +1,108 @@
+canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+
+    transform: translate(-50%, -50%);
+
+
+    width: 100%;
+    height: 100%;
+}
+
+html,
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: repeating-linear-gradient(to bottom, #2d0246, #220a42 2px, #1b001b 2px, #0a011b 4px);
+
+
+}
+
+.cube {
+
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    height: 190px;
+    color: red;
+    width: 100%;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 5px;
+    text-shadow: -2px 0 0 #fdff2a, -4px 0 0 #df4a42, 2px 0 0 #91fcfe, 4px 0 0 #4405fc;
+
+}
+
+#new_player {
+    position: absolute;
+    top: 1%;
+    left: 63%;
+    bottom: 0;
+    right: 0;
+    height: 90px;
+    color: #fff;
+    width: 100%;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 5px;
+    text-shadow: -2px 0 0 #fdff2a, -4px 0 0 #df4a42, 2px 0 0 #91fcfe, 4px 0 0 #4405fc;
+    animation: blink 1s steps(4, start)infinite;
+    z-index: 1;
+
+    /* animation-fill-mode: forwards; */
+
+
+
+}
+
+#demo{
+    position: absolute;
+    top: 7%;
+    left: 75%;
+
+    position: absolute;
+    z-index: 2;
+    color: white;
+
+}
+
+#demo p {
+    color: white;
+    font-size: 12px;
+    z-index: 2;
+
+}
+
+
+
+
+
+
+@-moz-keyframes blink {
+    to {
+        visibility: hidden;
+    }
+
+}
+
+@-webkit-keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-o-keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
