@@ -12,7 +12,7 @@
     <script type="text/javascript" src="./public/js/mainLogic.js"></script>
     <script type="text/javascript" src="./public/js/gameConfig.js"></script>
     <link rel="stylesheet" href="./public/css/form.css">
-    <!-- <link rel="stylesheet" href="./public/css/startingScene.css"> -->
+    <link rel="stylesheet" href="./public/css/startingScene.css">
 
 </head>
 
@@ -44,6 +44,7 @@
                 <input type="text" name="firstName" placeholder="Enter first name..." required minlength="3" maxlength="12">
                 
                 <input type="hidden" id="myField" name="score" value="" />
+                <input type="hidden" id="date" name="date" value="" />
 
                 <input id="login-button" type="submit" value="Add Name">
             </form>
@@ -63,8 +64,11 @@
         </ul>
     </div>
 
-
     <script type="text/javascript">
+
+        let currDate = new Date();
+        console.log(currDate);
+        document.getElementById("date").value = currDate;
 
         //this is makes the form visible\
         document.getElementById("wrapper").setAttribute("hidden", "");
