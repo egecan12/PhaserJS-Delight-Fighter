@@ -5,10 +5,12 @@
     <meta charset="UTF-8" />
     <title>Delights of Constantinople</title>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
-    <script type="text/javascript" src="./public/js/scenes/scene1.js"></script>
-    <script type="text/javascript" src="./public/js/scenes/scene2.js"></script>
-    <script type="text/javascript" src="./public/js/scenes/scene3.js"></script>
+    <script type="text/javascript" src="./public/js/scenes/openingScene.js"></script>
+    <script type="text/javascript" src="./public/js/scenes/episode1.js"></script>
+    <script type="text/javascript" src="./public/js/scenes/episode2.js"></script>
     <script type="text/javascript" src="./public/js/scenes/loadingScene.js"></script>
+    <script type="text/javascript" src="./public/js/mainLogic.js"></script>
+    <script type="text/javascript" src="./public/js/gameConfig.js"></script>
     <link rel="stylesheet" href="./public/css/form.css">
     <!-- <link rel="stylesheet" href="./public/css/startingScene.css"> -->
 
@@ -63,127 +65,6 @@
 
 
     <script type="text/javascript">
-        var config = {
-            type: Phaser.AUTO,
-            width: 800,
-            height: 600,
-            physics: {
-                default: 'arcade',
-                arcade: {
-                    gravity: {
-                        y: 300
-                    },
-                    debug: false
-                }
-            },
-            scene: [Scene1, Scene2, Loading_Scene, Scene3]
-            //add Scene1, Scene2, Loading_Scene, 
-        };
-
-        var player;
-        var stars;
-        var bombs;
-        var platforms;
-        var cursors;
-        var score = 0;
-        var gameOver = false;
-        var scoreText;
-        var spacebar;
-
-        var bullets
-        var speed
-        var stats;
-        var speed;
-        var lastFired = 0;
-        var birds;
-        var formisvisible = false;
-        var result = [];
-        var death_kill_count = 0 ;
-        var totalOfBirdsRespawn = 7;
-
-
-
-        var game = new Phaser.Game(config);
-
-
-        function collectStar(player, star) {
-            star.disableBody(true, true);
-
-            //  Add and update the score
-            score += 10;
-            scoreText.setText('Score: ' + score);
-            document.getElementById('myField').value = score;
-
-            if (stars.countActive(true) === 0) {
-                //  A new batch of stars to collect
-                stars.children.iterate(function (child) {
-
-                    child.enableBody(true, child.x, 0, true, true);
-
-                });
-
-                var x = (player.x < 400) ? Phaser.Math.Between(700, 800) : Phaser.Math.Between(0, 1);
-
-                var bomb = bombs.create(x, 1, 'bomb').setScale(1.3);
-                bomb.setBounce(1);
-                bomb.setCollideWorldBounds(true);
-                bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-
-                bomb.allowGravity = false;
-
-            }
-        }
-
-        function hitBomb(player, bomb) {
-            this.physics.pause();
-
-            player.setTint(0xff0000);
-
-            player.anims.play('jump');
-
-            gameOver = true;
-
-            this.background.tilePositionX = 0;
-
-        }
-
-        function hitBird(player, bird) {
-            this.physics.pause();
-
-            player.setTint(0xff0000);
-
-            player.anims.play('jump');
-
-            gameOver = true;
-
-
-
-        }
-        //star is the variable for the deligts
-        function killBird(stars, birds) {
-
-            score += 10;
-            scoreText.setText('Score: ' + score);
-            document.getElementById('myField').value = score;
-
-            totalOfBirdsRespawn = totalOfBirdsRespawn -1;
-
-
-            stars.body.destroy()
-            stars.visible = false;
-            death_kill_count = death_kill_count + 1 ;
-
-            birds.anims.play('explosion')
-            console.log(death_kill_count);
-            console.log(totalOfBirdsRespawn);
-
-            birds.once('animationcomplete', () => {
-                birds.disableBody(true, true);
-
-            });
-
-        }
-
 
         //this is makes the form visible\
         document.getElementById("wrapper").setAttribute("hidden", "");

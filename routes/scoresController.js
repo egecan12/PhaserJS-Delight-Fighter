@@ -18,6 +18,9 @@ router.get("/scores", function (req, res, next) {
     .limit(5)
     .then(function (users) {
       res.json(users);
+    })
+    .catch(function (error) {
+      console.error(error);
     });
 });
 

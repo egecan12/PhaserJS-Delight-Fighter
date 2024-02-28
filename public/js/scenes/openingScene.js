@@ -1,4 +1,4 @@
-class Scene1 extends Phaser.Scene {
+class OpeningScene extends Phaser.Scene {
   flag = true;
   flag2 = true;
   menuText = {};
@@ -7,7 +7,7 @@ class Scene1 extends Phaser.Scene {
   menuText4 = {};
 
   constructor() {
-    super({ key: "Scene1", active: false });
+    super({ key: "openingScene", active: false });
   }
 
   create() {
@@ -44,7 +44,7 @@ class Scene1 extends Phaser.Scene {
       fill: "#ffff00",
     });
     this.input.keyboard.on("keydown", (event) => {
-      this.scene.start("Scene2");
+      this.scene.start("episode1");
     });
     player = this.add.sprite(100, 450, "dude5").setScale(2.7);
     this.anims.create({
@@ -56,8 +56,8 @@ class Scene1 extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("sky2", "public/assets/bg2.png");
-    this.load.spritesheet("dude", "public/assets/dude2.png", {
+    this.load.image("sky2", "public/assets/openingScene/bg2.png");
+    this.load.spritesheet("dude", "public/assets/openingScene/dude2.png", {
       frameWidth: 60,
       frameHeight: 110,
     });

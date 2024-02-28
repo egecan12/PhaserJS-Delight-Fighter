@@ -4,7 +4,7 @@ class Scene3 extends Phaser.Scene {
 
   constructor() {
     super({
-      key: "Scene3",
+      key: "episode2",
       active: false,
     });
   }

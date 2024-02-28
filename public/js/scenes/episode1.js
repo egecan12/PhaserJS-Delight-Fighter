@@ -1,7 +1,7 @@
-class Scene2 extends Phaser.Scene {
+class Episode1 extends Phaser.Scene {
   gameOverText = {};
   constructor() {
-    super({ key: "Scene2", active: false });
+    super({ key: "episode1", active: false });
   }
   isCrouched = false;
 
@@ -115,23 +115,23 @@ class Scene2 extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("sky", "public/assets/sky2.png");
-    this.load.image("ground", "public/assets/platform4.png");
-    this.load.spritesheet("star", "public/assets/delight.png", {
+    this.load.image("sky", "public/assets/episode1/sky2.png");
+    this.load.image("ground", "public/assets/episode1/platform4.png");
+    this.load.spritesheet("star", "public/assets/episode1/delight.png", {
       frameWidth: 32,
       frameHeight: 64,
       endFrame: 11,
     });
-    this.load.image("bomb", "public/assets/bomb3.png");
-    this.load.spritesheet("dude", "public/assets/dude2.png", {
+    this.load.image("bomb", "public/assets/episode1/bomb3.png");
+    this.load.spritesheet("dude", "public/episode1/assets/dude2.png", {
       frameWidth: 50,
       frameHeight: 110,
     });
-    this.load.spritesheet("jump", "public/assets/dude2.png", {
+    this.load.spritesheet("jump", "public/assets/episode1/dude2.png", {
       frameWidth: 45,
       frameHeight: 110,
     });
-    this.load.spritesheet("dudeLeft", "public/assets/dudeLeft.png", {
+    this.load.spritesheet("dudeLeft", "public/assets/episode1/dudeLeft.png", {
       frameWidth: 55,
       frameHeight: 110,
     });

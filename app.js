@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const scoresController = require("./routes/scoresController");
+const dbConnection = require("./data/db");
 
 var app = express();
 var port = process.env.PORT || 3000;

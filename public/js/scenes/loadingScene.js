@@ -71,7 +71,7 @@ class Loading_Scene extends Phaser.Scene {
   update() {
     this.background.tilePositionX += 0.2;
     if (spacebar.isDown) {
-      this.scene.start("Scene3");
+      this.scene.start("episode2");
     }
 
     if (this.flag) {
