@@ -121,7 +121,7 @@ class Scene3 extends Phaser.Scene {
     //  The score
     scoreText = this.add.text(16, 16, "score: 0", {
       fontSize: "32px",
-      fill: "#fff",
+      fill: "#ffff00",
     });
 
     birds = this.physics.add.group();

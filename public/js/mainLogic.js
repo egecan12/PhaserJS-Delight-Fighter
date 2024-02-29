@@ -24,7 +24,7 @@ function collectStar(player, star) {
   //  Add and update the score
   score += 10;
   scoreText.setText("Score: " + score);
-  document.getElementById("myField").value = score;
+  document.getElementById("myScore").value = score;
 
   if (stars.countActive(true) === 0) {
     //  A new batch of stars to collect
@@ -71,7 +71,7 @@ function hitBird(player, bird) {
 function killBird(stars, birds) {
   score += 10;
   scoreText.setText("Score: " + score);
-  document.getElementById("myField").value = score;
+  document.getElementById("myScore").value = score;
 
   totalOfBirdsRespawn = totalOfBirdsRespawn - 1;
 

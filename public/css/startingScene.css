@@ -37,10 +37,10 @@ body {
 
 }
 
-#new_player {
+#bestScores {
     position: absolute;
     top: 1%;
-    left: 63%;
+    left: 75%;
     bottom: 0;
     right: 0;
     height: 90px;
@@ -60,9 +60,10 @@ body {
 }
 
 #demo{
+    background-color: #0a011bd1;
     position: absolute;
     top: 7%;
-    left: 75%;
+    left: 85%;
 
     position: absolute;
     z-index: 2;

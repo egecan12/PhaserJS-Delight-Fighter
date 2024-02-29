@@ -11,6 +11,7 @@
     <script type="text/javascript" src="./public/js/scenes/loadingScene.js"></script>
     <script type="text/javascript" src="./public/js/mainLogic.js"></script>
     <script type="text/javascript" src="./public/js/gameConfig.js"></script>
+    <script type="text/javascript" src="./public/js/getData.js"></script>
     <link rel="stylesheet" href="./public/css/form.css">
     <link rel="stylesheet" href="./public/css/startingScene.css">
 
@@ -18,8 +19,7 @@
 
 <body>
 
-
-    <div id="new_player">Best Scores
+    <div id="bestScores">Best Scores
         
     </div>
 
@@ -28,40 +28,25 @@
         <h1>Retro Arcade</h1>
 
     </div>
-    <!-- <form method="post" action="/addname">
-        <label>Enter Your Name</label><br>
-        <input type="text" name="firstName" placeholder="Enter first name..." required>
-        <input type="text" name="lastName" placeholder="Enter last name..." required>
-        <input type="submit" value="Add Name">
-    </form> -->
+
     <div id="demo"></div>
     <div id="wrapper" class="wrapper">
 
         <div class="container">
+            <h2 class="gameOver">Game Over</h2>
+
             <h2>Give me a cool name for the Scoreboard !</h2>
 
             <form method="post" action="/addname" class="form">
                 <input type="text" name="firstName" placeholder="Enter first name..." required minlength="3" maxlength="12">
                 
-                <input type="hidden" id="myField" name="score" value="" />
+                <input type="hidden" id="myScore" name="score" value="" />
                 <input type="hidden" id="date" name="date" value="" />
 
-                <input id="login-button" type="submit" value="Add Name">
+                <input id="submit-button" type="submit" value="Submit">
             </form>
         </div>
 
-        <ul class="bg-bubbles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
     </div>
 
     <script type="text/javascript">
@@ -72,30 +57,6 @@
 
         //this is makes the form visible\
         document.getElementById("wrapper").setAttribute("hidden", "");
-
-       
-        //http://localhost:3000/scores
-        fetch('/scores', {
-            method: 'get'
-        }).then(function (response) {
-            response.json()
-            .then(result => {
-                result.map(item => {
-
-                    console.log(item);
-                   
-                   document.getElementById("demo").innerHTML +=`<p>${item.firstName} ${item.score} </p>`
-          
-                })
-            })
-            .catch(err =>{
-                console.err(err);
-            })
-
-        }).catch(function (err) {
-            console.log("error");
-        });
-
 
         
     </script>

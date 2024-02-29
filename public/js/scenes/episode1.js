@@ -100,7 +100,7 @@ class Episode1 extends Phaser.Scene {
     //  The score
     scoreText = this.add.text(16, 16, "score: 0", {
       fontSize: "32px",
-      fill: "#fff",
+      fill: "#ffff00",
     });
 
     //  Collide the player and the stars with the platforms
