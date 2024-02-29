@@ -122,7 +122,7 @@ class Episode1 extends Phaser.Scene {
       frameHeight: 64,
       endFrame: 11,
     });
-    this.load.image("bomb", "public/assets/episode1/bomb3.png");
+    this.load.image("bomb", "public/assets/episode1/cat-pixel2.png");
     this.load.spritesheet("dude", "public/episode1/assets/dude2.png", {
       frameWidth: 50,
       frameHeight: 110,
