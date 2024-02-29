@@ -11,21 +11,18 @@ There is only 2 episodes existed so far. Upcoming episodes are on progress but y
 It is just for education purposes.
 
 Controllers:
-{
 "movement" : "left-right arrow"
 "jump" : "up arrow"
 "shield": "down arrow" (only valid on episode 2)
 "throw delight": "spacebar"(only valid on episode 2)
-}
 
 Credits:
 
-{
 "Developer": "Egecan Kahyaoglu",
 "Game Engine": "Phaser.js",
 "Routing": "Express.js for routing",
 "Database": "MongoDB to keep the scoreboard in Database",
-"Music": {
+"Music":
 "Provided to YouTube by Epic/Sony Music Soundtrax": {
 "Track": "Istanbul (Not Constantinople)",
 "Artist": "The Trevor Horn Orchestra",
@@ -34,13 +31,10 @@ Credits:
 "Composer": ["Jimmy Kennedy", "Nat Simon"],
 "Producer": "Trevor Horn",
 "Engineer": "Robert Orton"
-}
-},
-"SpriteSheets": {
+
+"SpriteSheets":
 "MainCharacter": "ondarisa - https://www.spriters-resource.com/arcade/legionnaire/sheet/124854/?source=genre",
 "Explosion": "Gussprint - https://www.spriters-resource.com/submitter/Gussprint/?source=genre"
-}
-}
 
 It is a browser games based on Phaser.JS developed on 2019
 
