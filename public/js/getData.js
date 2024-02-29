@@ -9,7 +9,7 @@ fetch("/scores", {
           console.log(item);
 
           document.getElementById(
-            "demo"
+            "topScorers"
           ).innerHTML += `<p>${item.firstName} ${item.score} </p>`;
         });
       })

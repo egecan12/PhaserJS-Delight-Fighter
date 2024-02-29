@@ -55,23 +55,22 @@ body {
 
     /* animation-fill-mode: forwards; */
 
-
-
 }
-
-#demo{
+.scorerContainer{
     background-color: #0a011bd1;
+}
+#topScorers{
     position: absolute;
     top: 7%;
     left: 85%;
-
+    background-color: #0a011bd1;
     position: absolute;
     z-index: 2;
     color: white;
 
 }
 
-#demo p {
+#topScorers p {
     color: white;
     font-size: 12px;
     z-index: 2;

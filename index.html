@@ -18,24 +18,19 @@
 </head>
 
 <body>
+<div class="scorerContainer">    
+    <div id="bestScores">Top Scores</div>
 
-    <div id="bestScores">Best Scores
-        
-    </div>
+    <div id="topScorers"></div>
+</div>
 
-    <div class="cube">
-
-        <h1>Retro Arcade</h1>
-
-    </div>
-
-    <div id="demo"></div>
     <div id="wrapper" class="wrapper">
 
         <div class="container">
             <h2 class="gameOver">Game Over</h2>
 
             <h2>Give me a cool name for the Scoreboard !</h2>
+            <p>If you can score higher than the individuals in the right corner, you may see your name there!</p>
 
             <form method="post" action="/addname" class="form">
                 <input type="text" name="firstName" placeholder="Enter first name..." required minlength="3" maxlength="12">
