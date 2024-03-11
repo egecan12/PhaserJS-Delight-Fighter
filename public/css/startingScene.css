@@ -103,3 +103,20 @@ body {
         visibility: hidden;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    canvas {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Adjust styles as needed */
+}
+
+/* Styles for screens that are in landscape orientation */
+@media screen and (orientation: landscape) {
+    /* Adjust styles as needed */
+}

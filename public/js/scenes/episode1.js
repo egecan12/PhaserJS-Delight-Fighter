@@ -77,7 +77,28 @@ class Episode1 extends Phaser.Scene {
       frames: [{ key: "dude", frame: 0 }],
       frameRate: 24,
     });
+    this.input.on(
+      "pointerdown",
+      function (pointer) {
+        if (pointer.x < config.width / 2) {
+          player.setVelocityX(-160);
+          player.anims.play("left", true);
+        } else {
+          player.setVelocityX(160);
+          player.anims.play("right", true);
+        }
+      },
+      this
+    );
 
+    this.input.on(
+      "pointerup",
+      function () {
+        player.setVelocityX(0);
+        player.anims.play("turn");
+      },
+      this
+    );
     //  Input Events
     cursors = this.input.keyboard.createCursorKeys();
 
