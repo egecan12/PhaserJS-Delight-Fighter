@@ -1,6 +1,10 @@
+<img width="960" alt="21" src="https://user-images.githubusercontent.com/45043515/115086120-a9469880-9ed9-11eb-9a36-5798c24e9f78.png">
+
 # The Delights of Constantinople 2019
 
-It is a web game develop on Phaser.js and Node.js.
+It is a web game developed using Phaser.js and Node.js.
+
+[Play](web-game-delight-fighter.onrender.com)
 
 You can also send your high score to MongoDB at the end of the game.
 
@@ -52,4 +56,3 @@ Do not forget to add your MongoURI to make it work.
 
  <img width="953" alt="12" src="https://user-images.githubusercontent.com/45043515/115086117-a8ae0200-9ed9-11eb-8bb1-ecfd49d8036e.png">
 <img width="956" alt="123" src="https://user-images.githubusercontent.com/45043515/115086119-a8ae0200-9ed9-11eb-9fe3-57b915814034.png">
-<img width="960" alt="21" src="https://user-images.githubusercontent.com/45043515/115086120-a9469880-9ed9-11eb-9a36-5798c24e9f78.png">
